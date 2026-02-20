@@ -1,24 +1,81 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import Country from "./Country";
+import State from "./State";
+import District from "./District";
+import Language from "./Language";
+import Image from "./Image";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="d-flex flex-column min-vh-100">
+
+        {/* Top Navbar */}
+        <nav className="navbar navbar-dark bg-dark shadow-sm">
+          <div className="container-fluid">
+            <NavLink className="navbar-brand fw-bold" to="/">
+              Siwansh Solutions
+            </NavLink>
+          </div>
+        </nav>
+
+        {/* Main Layout */}
+        <div className="container-fluid flex-grow-1">
+          <div className="row">
+
+            {/* Sidebar */}
+            <div className="col-md-3 col-lg-2 bg-light p-3 border-end">
+              <ul className="nav flex-column">
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/language">
+                    Language
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/country">
+                    Country
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/state">
+                    State
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/district">
+                    District
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/image">
+                    Image Upload
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+            {/* Content Area */}
+            <div className="col-md-9 col-lg-10 p-4">
+              <Routes>
+                <Route path="/Language" element={<Language />} />
+                <Route path="/Country" element={<Country />} />
+                <Route path="/State" element={<State />} />
+                <Route path="/District" element={<District />} />
+                <Route path="/Image" element={<Image />} />
+              </Routes>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Footer */}
+        <footer className="bg-dark text-light py-3 mt-auto">
+          <div className="container text-center">
+            © {new Date().getFullYear()} Siwansh Solutions. All rights reserved.
+          </div>
+        </footer>
+
+      </div>
+    </Router>
   );
 }
 
