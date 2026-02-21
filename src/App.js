@@ -4,6 +4,7 @@ import State from "./State";
 import District from "./District";
 import Language from "./Language";
 import Image from "./Image";
+import Radio from "./Radio";
 
 function App() {
   return (
@@ -51,6 +52,11 @@ function App() {
                     Image Upload
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/radio">
+                    Radio button
+                  </NavLink>
+                </li>
               </ul>
             </div>
             {/* Content Area */}
@@ -61,6 +67,7 @@ function App() {
                 <Route path="/State" element={<State />} />
                 <Route path="/District" element={<District />} />
                 <Route path="/Image" element={<Image />} />
+                <Route path="/Radio" element={<Radio />} />
               </Routes>
             </div>
 
