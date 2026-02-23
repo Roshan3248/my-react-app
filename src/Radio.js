@@ -121,7 +121,7 @@ function Radio() {
           <div className="table-responsive">
             <table className="table table-bordered table-hover align-middle">
 
-              <thead className="table-dark">
+              <thead className="table-light">
                 <tr>
                   <th>Name</th>
                   <th>Email</th>

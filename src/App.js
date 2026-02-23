@@ -5,6 +5,8 @@ import District from "./District";
 import Language from "./Language";
 import Image from "./Image";
 import Radio from "./Radio";
+import Searching from "./Searching";
+import Pagination from "./Pagination";
 
 function App() {
   return (
@@ -57,6 +59,16 @@ function App() {
                     Radio button
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/searching">
+                    Searching
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/pagination">
+                    Pagination
+                  </NavLink>
+                </li>
               </ul>
             </div>
             {/* Content Area */}
@@ -68,6 +80,8 @@ function App() {
                 <Route path="/District" element={<District />} />
                 <Route path="/Image" element={<Image />} />
                 <Route path="/Radio" element={<Radio />} />
+                <Route path="/Searching" element={<Searching />} />
+                <Route path="/Pagination" element={<Pagination />} />
               </Routes>
             </div>
 
