@@ -39,36 +39,73 @@ function Radio() {
             </div>
             <div className="col-md-3">
               <label className="form-label">Country</label>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter country"
-              />
-            </div>
+              <select className="form-select">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+              </select>
+          </div>
             <div className="col-md-3">
               <label className="form-label">State</label>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter state"
-              />
+              <select className="form-select">
+                <option value="">Select State</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="California">California</option>
+                <option value="London">London</option>
+              </select>
             </div>
             <div className="col-md-3">
               <label className="form-label">District</label>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter district"
-              />
+              <select className="form-select">
+                <option value="">Select District</option>
+                <option value="Pune">Pune</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Westminster">Westminster</option>
+              </select>
             </div>
             <div className="col-md-3">
-              <label className="form-label">Gender</label>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter Gender"
-              />
-            </div>
+  <label className="form-label d-block">Gender</label>
+
+  <div className="form-check form-check-inline">
+    <input
+      className="form-check-input"
+      type="radio"
+      name="gender"
+      id="male"
+      value="Male"
+    />
+    <label className="form-check-label" htmlFor="male">
+      Male
+    </label>
+  </div>
+
+  <div className="form-check form-check-inline">
+    <input
+      className="form-check-input"
+      type="radio"
+      name="gender"
+      id="female"
+      value="Female"
+    />
+    <label className="form-check-label" htmlFor="female">
+      Female
+    </label>
+  </div>
+
+  <div className="form-check form-check-inline">
+    <input
+      className="form-check-input"
+      type="radio"
+      name="gender"
+      id="other"
+      value="Other"
+    />
+    <label className="form-check-label" htmlFor="other">
+      Other
+    </label>
+  </div>
+</div>
 
             <div className="col-12">
               <button className="btn btn-primary btn-sm">
@@ -98,6 +135,40 @@ function Radio() {
               </thead>
 
               <tbody>
+                <tr>
+                  <td>Anil</td>
+                  <td>anil@test.com</td>
+                  <td>9876543210</td>
+                  <td>India</td>
+                  <td>Maharashtra</td>
+                  <td>Pune</td>
+                  <td>Male</td>
+                  <td>
+                    <button className="btn btn-warning me-2">
+                      Edit
+                    </button>
+                    <button className="btn btn-danger">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sita</td>
+                  <td>sita@test.com</td>
+                  <td>9876501234</td>
+                  <td>USA</td>
+                  <td>California</td>
+                  <td>Los Angeles</td>
+                  <td>Female</td>
+                  <td>
+                    <button className="btn btn-warning me-2">
+                      Edit
+                    </button>
+                    <button className="btn btn-danger">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
               </tbody>
 
             </table>
