@@ -1,20 +1,21 @@
-import React from "react";
-
-function Pagination() {
+function Export() {
   return (
     <div className="container my-5">
       <div className="card shadow-sm">
         <div className="card-body">
 
-          {/* Header */}
-          <div className="d-flex justify-content-between align-items-center mb-4">
+            {/* Header */}
+            <div className="d-flex justify-content-between align-items-center mb-4">
             <h4 className="mb-0 fw-bold">Student Management</h4>
             <button className="btn btn-success">
               + Add Student
             </button>
-          </div>
+             <button className="btn btn-secondary">
+                ⬇ Export
+              </button>
+            </div>
 
-          {/* Search + Records Per Page */}
+         {/* Search + Records Per Page */}
           <div className="row mb-3 align-items-center">
             <div className="col-md-4">
               <div className="input-group">
@@ -42,8 +43,7 @@ function Pagination() {
           </div>
 
           <hr className="my-3" />
-
-          {/* Table Section */}
+ {/* Table Section */}
           <div className="table-responsive">
             <table className="table table-bordered table-hover align-middle">
               <thead className="table-light">
@@ -59,11 +59,11 @@ function Pagination() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="fw-semibold">John Doe</td>
-                  <td>john@example.com</td>
+                  <td className="fw-semibold">John A. Doe</td>
+                  <td>john.doe@example.com</td>
                   <td>USA</td>
                   <td>California</td>
-                  <td>District A</td>
+                  <td>Los Angeles</td>
                   <td>Male</td>
                   <td>
                     <button className="btn btn-warning btn-sm me-2">
@@ -77,59 +77,11 @@ function Pagination() {
 
                 <tr>
                   <td className="fw-semibold">Jane Smith</td>
-                  <td>jane@example.com</td>
-                  <td>USA</td>
-                  <td>Texas</td>
-                  <td>District B</td>
+                  <td>jane.smith@example.com</td>
+                  <td>India</td>
+                  <td>Maharashtra</td>
+                  <td>Mumbai</td>
                   <td>Female</td>
-                  <td>
-                    <button className="btn btn-warning btn-sm me-2">
-                      Edit
-                    </button>
-                    <button className="btn btn-danger btn-sm">
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="fw-semibold">Mike Ross</td>
-                  <td>mike@example.com</td>
-                  <td>Canada</td>
-                  <td>Ontario</td>
-                  <td>District C</td>
-                  <td>Male</td>
-                  <td>
-                    <button className="btn btn-warning btn-sm me-2">
-                      Edit
-                    </button>
-                    <button className="btn btn-danger btn-sm">
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="fw-semibold">Rachel Zane</td>
-                  <td>rachel@example.com</td>
-                  <td>Canada</td>
-                  <td>Ontario</td>
-                  <td>District B</td>
-                  <td>Female</td>
-                  <td>
-                    <button className="btn btn-warning btn-sm me-2">
-                      Edit
-                    </button>
-                    <button className="btn btn-danger btn-sm">
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="fw-semibold">Harvey Specter</td>
-                  <td>harvey@example.com</td>
-                  <td>UK</td>
-                  <td>London</td>
-                  <td>District A</td>
-                  <td>Male</td>
                   <td>
                     <button className="btn btn-warning btn-sm me-2">
                       Edit
@@ -142,11 +94,10 @@ function Pagination() {
               </tbody>
             </table>
           </div>
-
-        </div>
+         </div>
       </div>
     </div>
   );
 }
 
-export default Pagination;
+export default Export;

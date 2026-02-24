@@ -7,6 +7,9 @@ import Image from "./Image";
 import Radio from "./Radio";
 import Searching from "./Searching";
 import Pagination from "./Pagination";
+import Export from "./Export";
+import Checkbox from "./Checkbox";
+import Multiselect from "./Multiselect";
 
 function App() {
   return (
@@ -69,6 +72,21 @@ function App() {
                     Pagination
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/export">
+                    Export CSV
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/checkbox">
+                    Checkbox
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/multiselect">
+                    Multi Select Dropdown
+                  </NavLink>
+                </li>
               </ul>
             </div>
             {/* Content Area */}
@@ -82,6 +100,9 @@ function App() {
                 <Route path="/Radio" element={<Radio />} />
                 <Route path="/Searching" element={<Searching />} />
                 <Route path="/Pagination" element={<Pagination />} />
+                <Route path="/Export" element={<Export />} />
+                <Route path="/Checkbox" element={<Checkbox />} />
+                <Route path="/Multiselect" element={<Multiselect />} />
               </Routes>
             </div>
 
